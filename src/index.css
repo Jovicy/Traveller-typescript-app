@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  @apply text-paragraph-color;
+  @apply bg-primary-10;
+  background-image: url('./assets/hero-bg.png');
+  background-size: cover;
+}

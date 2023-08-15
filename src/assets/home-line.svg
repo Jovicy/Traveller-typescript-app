@@ -1,0 +1,15 @@
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="home-line" clip-path="url(#clip0_49_87)">
+<g id="Group">
+<g id="Group_2">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M3.43457 11.4849C3.4535 5.91447 7.98459 1.41405 13.5551 1.43292C19.1255 1.45191 23.6259 5.983 23.6071 11.5535V11.6677C23.5385 15.2887 21.5167 18.6355 19.0379 21.2513C17.6204 22.7234 16.0373 24.0266 14.3204 25.135C13.8613 25.5321 13.1803 25.5321 12.7212 25.135C10.1616 23.469 7.9152 21.3657 6.08463 18.9211C4.45308 16.7894 3.52674 14.202 3.43457 11.5192V11.4849Z" stroke="#1B485A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M13.5203 14.9116C15.3057 14.9116 16.7531 13.4643 16.7531 11.6788C16.7531 9.89341 15.3057 8.44604 13.5203 8.44604C11.7348 8.44604 10.2875 9.89341 10.2875 11.6788C10.2875 13.4643 11.7348 14.9116 13.5203 14.9116Z" stroke="#1B485A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_49_87">
+<rect width="28" height="28" fill="white"/>
+</clipPath>
+</defs>
+</svg>
