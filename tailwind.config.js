@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -26,6 +27,9 @@ export default {
       fontFamily: {
         openSans: ['Open Sans', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif']
+      },
+      fontSize: {
+        "base": "1.125rem",
       },
     },
     screens: {

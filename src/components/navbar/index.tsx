@@ -1,28 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '@/assets/logo.png';
-import menu from '@/assets/hamburger.png';
+import logo from '../../assets/logo.png';
+import menu from '../../assets/hamburger.png';
 
 const Navbar: React.FC = () => {
-  return(
-    <nav className='flex p-4 w-screen bg-white'>
-        <div className="flex items-center justify-between">
+    // const flexBetween = "flex items-center justify-between";
+
+    return(
+        <nav className="text-white bg-transparent py-4 px-6">
+        <div className="container mx-auto">
+          <div className="flex justify-between items-center">
             <div className="logo">
-                <img src={logo} alt="logo" />
+              <img src={logo} alt="logo" />
             </div>
-            <ul>
-                <li><Link to={"/"}>Home</Link></li>
-                <li><Link to={"/"}>About</Link></li>
-                <li><Link to={"/"}>Contact</Link></li>
-                <li><Link to={"/"}>Services</Link></li>
-                <li><Link to={"/"}>Blog</Link></li>
+            <ul className='flex gap-7'>
+                <li className='font-semibold font-openSans text-base'><Link className='text-secondary-100' to={"/"}>Home</Link></li>
+                <li className='font-semibold font-openSans text-base'><Link className='text-paragraph-color hover:text-secondary-100' to={"/"}>About</Link></li>
+                <li className='font-semibold font-openSans text-base'><Link className='text-paragraph-color hover:text-secondary-100' to={"/"}>Contact</Link></li>
+                <li className='font-semibold font-openSans text-base'><Link className='text-paragraph-color hover:text-secondary-100' to={"/"}>Services</Link></li>
+                <li className='font-semibold font-openSans text-base'><Link className='text-paragraph-color hover:text-secondary-100' to={"/"}>Blog</Link></li>
             </ul>
             <div className="menu">
-                <img src={menu} alt="menu-btn" />
+              <img src={menu} alt="menu-btn" />
             </div>
+          </div>
         </div>
-    </nav>
-  );
+      </nav>
+    );
 };
 
 export default Navbar;

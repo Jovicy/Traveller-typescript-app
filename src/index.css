@@ -12,7 +12,12 @@ body,
   width: 100%;
   font-family: "Open Sans", sans-serif;
   @apply text-paragraph-color;
-  @apply bg-primary-10;
-  background-image: url('./assets/hero-bg.png');
+  @apply bg-white;
+  background-image: url('./assets/hero-bgs.svg');
   background-size: cover;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
 }
