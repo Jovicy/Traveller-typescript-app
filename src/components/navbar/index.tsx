@@ -1,32 +1,83 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.png';
-import menu from '../../assets/hamburger.png';
+import React, { useState } from "react";
+import logo from "../../assets/logo.png";
+import menu from "../../assets/hamburger.png";
+import { Link } from "react-scroll";
 
 const Navbar: React.FC = () => {
-    // const flexBetween = "flex items-center justify-between";
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    return(
-        <nav className="text-white bg-transparent py-4 px-6">
-        <div className="container mx-auto">
-          <div className="flex justify-between items-center">
-            <div className="logo">
-              <img src={logo} alt="logo" />
-            </div>
-            <ul className='flex gap-7'>
-                <li className='font-semibold font-openSans text-base'><Link className='text-secondary-100' to={"/"}>Home</Link></li>
-                <li className='font-semibold font-openSans text-base'><Link className='text-paragraph-color hover:text-secondary-100' to={"/"}>About</Link></li>
-                <li className='font-semibold font-openSans text-base'><Link className='text-paragraph-color hover:text-secondary-100' to={"/"}>Contact</Link></li>
-                <li className='font-semibold font-openSans text-base'><Link className='text-paragraph-color hover:text-secondary-100' to={"/"}>Services</Link></li>
-                <li className='font-semibold font-openSans text-base'><Link className='text-paragraph-color hover:text-secondary-100' to={"/"}>Blog</Link></li>
-            </ul>
-            <div className="menu">
-              <img src={menu} alt="menu-btn" />
-            </div>
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const flexBetween = "flex items-center justify-between";
+  const mobileMenuClasses = isMenuOpen ? "block" : "hidden";
+
+  return (
+    <nav className="text-white bg-white z-20 py-5 mb-[30px] fixed w-full">
+      <div className="container mx-auto">
+        <div className={`${flexBetween}`}>
+          <div className="logo cursor-pointer">
+            <img src={logo} alt="logo" />
+          </div>
+          <ul
+            className={`md:${flexBetween} ${mobileMenuClasses} md:flex gap-7`}
+          >
+            <Link
+              activeClass="active"
+              offset={-200}
+              smooth={true}
+              spy={true}
+              to="home"
+              className="text-paragraph-color hover:text-secondary-100 font-semibold font-openSans text-base cursor-pointer"
+            >
+              Home
+            </Link>
+            <Link
+              activeClass="active"
+              smooth={true}
+              spy={true}
+              to="about"
+              className="text-paragraph-color hover:text-secondary-100 font-semibold font-openSans text-base cursor-pointer"
+            >
+              About
+            </Link>
+            <Link
+              activeClass="active"
+              smooth={true}
+              spy={true}
+              to="packages"
+              className="text-paragraph-color hover:text-secondary-100 font-semibold font-openSans text-base cursor-pointer"
+            >
+              Packages
+            </Link>
+            <Link
+              activeClass="active"
+              smooth={true}
+              spy={true}
+              to="services"
+              className="text-paragraph-color hover:text-secondary-100 font-semibold font-openSans text-base cursor-pointer"
+            >
+              Services
+            </Link>
+            <Link
+              activeClass="active"
+              smooth={true}
+              spy={true}
+              to="blog"
+              className="text-paragraph-color hover:text-secondary-100 font-semibold font-openSans text-base cursor-pointer"
+            >
+              Blog
+            </Link>
+            {/* Add more navigation links here */}
+          </ul>
+          <div className="menu cursor-pointer" onClick={toggleMenu}>
+            <img src={menu} alt="menu-btn" />
           </div>
         </div>
-      </nav>
-    );
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
