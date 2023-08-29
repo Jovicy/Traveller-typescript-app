@@ -12,9 +12,9 @@ const Blog: React.FC = () => {
       className="flex flex-col gap-40 bg-transparent w-full pt-36 pb-14"
     >
       <div className="relative -mt-60 w-full">
-        <div className="flex gap-4 items-center">
+        <div className="flex md:flex-nowrap flex-wrap gap-4 items-center">
           {gallery.map((photo) => (
-            <div className="w-1/5">
+            <div className="md:w-1/5 w-full">
               <img
                 src={photo.image}
                 alt="gallery-img"
@@ -26,21 +26,21 @@ const Blog: React.FC = () => {
       </div>
       <div className={`${flexBetween} mx-auto w-full gap-4 container`}>
         <div className="flex flex-col gap-10">
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col md:text-left text-center gap-3">
             <div>
               <h2 className="text-secondary-100 font-montez text-base-sm font-normal text-transform: capitalize">
                 blog & news
               </h2>
             </div>
             <div>
-              <h1 className="font-messiri text-base-md font-bold text-heading-color text-transform: capitalize">
+              <h1 className="font-messiri md:text-base-md text-md-resp font-bold text-heading-color text-transform: capitalize">
                 Read Our Latest News & <br /> Blog
               </h1>
             </div>
           </div>
-          <div className="flex justify-between">
+          <div className="flex md:flex-row flex-col justify-between">
             {blogPost.map((post) => (
-              <div className="w-[31.25%]">
+              <div className="md:w-[31.25%] w-full">
                 <div className="relative">
                   <div className="bg-secondary-100 cursor-pointer text-white  rounded-tr-lg shadow-lg absolute py-2 px-5 flex items-center top-[1rem] right-[1rem] hover:scale-105">
                     <p className="font text-base">{post.category}</p>

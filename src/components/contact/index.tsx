@@ -7,13 +7,13 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="flex items-end bg-home bg-cover p-52 bg-bottom bg-no-repeat w-full"
+      className="flex items-end bg-home bg-cover md:p-52 bg-bottom bg-no-repeat w-full"
     >
       <div
-        className={`${flexBetween} mx-auto w-full gap-4 container mb-14`}
+        className={`${flexBetween} md:flex-row flex-col mx-auto w-full gap-4 container mb-14`}
       >
         <div>
-          <h1 className="font-messiri text-base-md font-bold text-white text-transform: capitalize">
+          <h1 className="font-messiri md:text-base-md text-center md:text-start text-md-resp font-bold text-white text-transform: capitalize">
             Start Saving on Your <br /> Travel Budget.
           </h1>
         </div>

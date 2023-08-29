@@ -20,57 +20,59 @@ const Navbar: React.FC = () => {
           <div className="logo cursor-pointer">
             <img src={logo} alt="logo" />
           </div>
-          <ul
-            className={`md:${flexBetween} ${mobileMenuClasses} md:flex gap-7`}
-          >
-            <Link
-              activeClass="active"
-              offset={-200}
-              smooth={true}
-              spy={true}
-              to="home"
-              className="text-paragraph-color hover:text-secondary-100 font-semibold font-openSans text-base cursor-pointer"
+          <div className={`md:static absolute md:bg-transparent bg-primary-10 md:p-0 md:w-auto pt-8 pb-20 left-0 md:top-0 top-[100%] w-full flex items-center px-5 ${mobileMenuClasses}`}>
+            <ul
+              className={`flex md:flex-row flex-col md:items-center justify-center md:flex gap-7`}
             >
-              Home
-            </Link>
-            <Link
-              activeClass="active"
-              smooth={true}
-              spy={true}
-              to="about"
-              className="text-paragraph-color hover:text-secondary-100 font-semibold font-openSans text-base cursor-pointer"
-            >
-              About
-            </Link>
-            <Link
-              activeClass="active"
-              smooth={true}
-              spy={true}
-              to="packages"
-              className="text-paragraph-color hover:text-secondary-100 font-semibold font-openSans text-base cursor-pointer"
-            >
-              Packages
-            </Link>
-            <Link
-              activeClass="active"
-              smooth={true}
-              spy={true}
-              to="services"
-              className="text-paragraph-color hover:text-secondary-100 font-semibold font-openSans text-base cursor-pointer"
-            >
-              Services
-            </Link>
-            <Link
-              activeClass="active"
-              smooth={true}
-              spy={true}
-              to="blog"
-              className="text-paragraph-color hover:text-secondary-100 font-semibold font-openSans text-base cursor-pointer"
-            >
-              Blog
-            </Link>
-            {/* Add more navigation links here */}
-          </ul>
+              <Link
+                activeClass="active"
+                offset={-200}
+                smooth={true}
+                spy={true}
+                to="home"
+                className="text-paragraph-color hover:text-secondary-100 font-semibold font-openSans text-base cursor-pointer"
+              >
+                Home
+              </Link>
+              <Link
+                activeClass="active"
+                smooth={true}
+                spy={true}
+                to="about"
+                className="text-paragraph-color hover:text-secondary-100 font-semibold font-openSans text-base cursor-pointer"
+              >
+                About
+              </Link>
+              <Link
+                activeClass="active"
+                smooth={true}
+                spy={true}
+                to="packages"
+                className="text-paragraph-color hover:text-secondary-100 font-semibold font-openSans text-base cursor-pointer"
+              >
+                Packages
+              </Link>
+              <Link
+                activeClass="active"
+                smooth={true}
+                spy={true}
+                to="services"
+                className="text-paragraph-color hover:text-secondary-100 font-semibold font-openSans text-base cursor-pointer"
+              >
+                Services
+              </Link>
+              <Link
+                activeClass="active"
+                smooth={true}
+                spy={true}
+                to="blog"
+                className="text-paragraph-color hover:text-secondary-100 font-semibold font-openSans text-base cursor-pointer"
+              >
+                Blog
+              </Link>
+              {/* Add more navigation links here */}
+            </ul>
+          </div>
           <div className="menu cursor-pointer" onClick={toggleMenu}>
             <img src={menu} alt="menu-btn" />
           </div>

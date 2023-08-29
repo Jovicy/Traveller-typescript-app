@@ -21,11 +21,11 @@ const Destination: React.FC = () => {
         </div>
         <div className="flex flex-col items-center gap-10">
           <div>
-            <h1 className="font-messiri text-base-md font-bold text-heading-color text-transform: capitalize">
+            <h1 className="font-messiri md:text-base-md text-md-resp font-bold text-center text-heading-color text-transform: capitalize">
               Find you best destination
             </h1>
           </div>
-          <div className="flex flex-wrap justify-between gap-6">
+          <div className="flex flex-wrap md:justify-between justify-center md:text-left text-center gap-6">
             {destinations.map((destination) => (
               <div>
                 <div className="relative">
@@ -40,7 +40,7 @@ const Destination: React.FC = () => {
                 <div>
                   <h1 className="text-heading-color font-bold text-base-sm font-messiri text-transform: capitalize">{destination.title}</h1>
                 </div>
-                <div className="flex gap-3 items-center">
+                <div className="flex gap-3 items-center justify-center md:justify-start">
                   <div>
                     <img src={location} alt="location" />
                   </div>

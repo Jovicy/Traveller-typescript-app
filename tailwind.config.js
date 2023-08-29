@@ -45,6 +45,7 @@ export default {
       fontSize: {
         "sm": "0.75rem",
         "nrml": "1rem",
+        "md-resp": "2rem",
         "md": "2.375rem",
         "base": "1.125rem",
         "base-sm": "1.75rem",
