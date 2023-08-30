@@ -1,6 +1,7 @@
 import React from "react";
 import beachImg from "../../assets/Rectangle 14.png";
 import { packagesFeatures } from "../../data/database";
+import { motion } from "framer-motion";
 
 const Packages: React.FC = () => {
   const flexBetween = "flex items-center justify-between";
@@ -13,26 +14,58 @@ const Packages: React.FC = () => {
       <div className={`${flexBetween} mx-auto w-full gap-4 container`}>
         <div className="flex flex-col gap-8 md:text-left text-center md:items-start items-center">
           <div className="flex flex-col gap-3">
-            <div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, y: -50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
               <h2 className="text-secondary-100 font-montez text-base-sm font-normal text-transform: capitalize">
                 Packages
               </h2>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, x: -50 },
+                visible: { opacity: 1, x: 0 },
+              }}
+            >
               <h1 className="font-messiri md:text-base-md text-md-resp font-bold text-heading-color text-transform: capitalize">
                 Embark on our Exclusive <br /> Package
               </h1>
-            </div>
+            </motion.div>
           </div>
           <div className="flex items-start md:flex-row flex-col md:gap-10 gap-20">
-            <div className="md:w-1/2 w-full flex flex-col gap-6">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, x: 50 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              className="md:w-1/2 w-full flex flex-col gap-6"
+            >
               <div>
                 <img src={beachImg} alt="beach-img" />
               </div>
               <div className="flex flex-col gap-6 md:items-start items-center">
                 <div className="flex md:gap-6 gap-1">
-                  <p className="text-heading-color font-normal md:text-nrml text-sm">24 - 28 july</p>
-                  <p className="text-heading-color font-normal md:text-nrml text-sm">-</p>
+                  <p className="text-heading-color font-normal md:text-nrml text-sm">
+                    24 - 28 july
+                  </p>
+                  <p className="text-heading-color font-normal md:text-nrml text-sm">
+                    -
+                  </p>
                   <p className="text-heading-color font-normal md:text-nrml text-sm">
                     4 day 3 Night{" "}
                   </p>
@@ -62,8 +95,18 @@ const Packages: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="md:w-1/2 w-full">
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, x: -50 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              className="md:w-1/2 w-full"
+            >
               <div className="flex flex-col gap-7 md:text-left text-center">
                 {packagesFeatures.map((feature) => (
                   <div className="border-b-2 border-black last-of-type:border-none">
@@ -71,7 +114,9 @@ const Packages: React.FC = () => {
                       <p className="text-heading-color md:font-normal md:font-nrml text-sm">
                         {feature.startDate}
                       </p>
-                      <p className="text-heading-color md:font-normal md:font-nrml text-sm">-</p>
+                      <p className="text-heading-color md:font-normal md:font-nrml text-sm">
+                        -
+                      </p>
                       <p className="text-heading-color md:font-normal md:font-nrml text-sm">
                         {feature.timeSpent}
                       </p>
@@ -82,12 +127,14 @@ const Packages: React.FC = () => {
                       </h1>
                     </div>
                     <div className="pb-5">
-                        <p className="font-openSans text-nrml font-normal leading-[150%]">{feature.desp}</p>
+                      <p className="font-openSans text-nrml font-normal leading-[150%]">
+                        {feature.desp}
+                      </p>
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

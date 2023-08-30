@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="text-white bg-white z-20 py-5 mb-[30px] fixed w-full">
-      <div className="container mx-auto">
+      <div className="container mx-auto md:px-0 px-4">
         <div className={`${flexBetween}`}>
           <div className="logo cursor-pointer">
             <img src={logo} alt="logo" />

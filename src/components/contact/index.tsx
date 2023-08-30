@@ -1,5 +1,6 @@
 import React from "react";
 import contactBtn from "../../assets/contact btn.svg";
+import { motion } from "framer-motion";
 
 const Contact: React.FC = () => {
   const flexBetween = "flex items-center justify-between";
@@ -12,14 +13,33 @@ const Contact: React.FC = () => {
       <div
         className={`${flexBetween} md:flex-row flex-col mx-auto w-full gap-4 container mb-14`}
       >
-        <div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: -50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+        >
           <h1 className="font-messiri md:text-base-md text-center md:text-start text-md-resp font-bold text-white text-transform: capitalize">
             Start Saving on Your <br /> Travel Budget.
           </h1>
-        </div>
-        <div className="cursor-pointer">
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          className="cursor-pointer"
+        >
           <img src={contactBtn} alt="contactBtn" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

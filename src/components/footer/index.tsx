@@ -5,8 +5,9 @@ import {
   EnvelopeIcon,
   MapPinIcon,
 } from "@heroicons/react/24/outline";
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
 import { socialIcons } from "../../data/database";
+import { motion } from "framer-motion";
 
 const Footer: React.FC = () => {
   const flexBetween = "flex items-center justify-between";
@@ -18,26 +19,63 @@ const Footer: React.FC = () => {
     >
       <div className="flex flex-col mx-auto w-full gap-10 md:text-left text-center container">
         <div className="flex md:flex-row flex-col md:items-start items-center md:text-left text-center justify-between w-full md:items-center items-start">
-          <div className="md:w-1/2 w-full">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: -50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            className="md:w-1/2 w-full"
+          >
             <h1 className="font-messiri md:text-base-md text-md-resp font-bold text-heading-color text-transform: capitalize">
               Join our newsletter
             </h1>
-          </div>
-          <div className="md:w-1/2 w-full flex justify-center items-center">
-            <div>
-            <input
-              type="email"
-              placeholder="Email Your Address"
-              className="bg-white text-white font-semibold border text-transform: capitalize text-nrml rounded-none py-4 px-4 w-9/12 md:w-full focus:outline-none focus:ring focus:ring-primary-100 "
-            />
-            </div>
-            <div>
-            <button className="bg-primary-100 hover:bg-transparent text-white hover:text-primary-100 font-semibold border relative right-10 hover:border-primary-100 text-transform: capitalize text-nrml rounded-none py-2 px-4 cursor-pointer">
-              Subscribe
-            </button>
-            </div>
-
-          </div>
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            className="md:w-1/2 w-full flex justify-center items-center"
+          >
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, x: -50 },
+                visible: { opacity: 1, x: 0 },
+              }}
+            >
+              <input
+                type="email"
+                placeholder="Email Your Address"
+                className="bg-white text-white font-semibold border text-transform: capitalize text-nrml rounded-none py-4 px-4 w-9/12 md:w-full focus:outline-none focus:ring focus:ring-primary-100 "
+              />
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              <button className="bg-primary-100 hover:bg-transparent text-white hover:text-primary-100 font-semibold border relative right-10 hover:border-primary-100 text-transform: capitalize text-nrml rounded-none py-2 px-4 cursor-pointer">
+                Subscribe
+              </button>
+            </motion.div>
+          </motion.div>
         </div>
         <div className="border-t-2 pt-10 border-primary-25 flex md:flex-row flex-col md:gap-0 gap-10 md:text-left text-center md:items-start items-center justify-between w-full">
           <div className="flex flex-col gap-6">
@@ -102,7 +140,7 @@ const Footer: React.FC = () => {
                   to="#"
                   className="text-paragraph-color hover:text-secondary-100 font-medium font-messiri text-nrml cursor-pointer"
                 >
-                New square, NY
+                  New square, NY
                 </Link>
               </div>
             </div>
@@ -123,7 +161,7 @@ const Footer: React.FC = () => {
                   to="about"
                   className="text-paragraph-color hover:text-secondary-100 font-medium font-messiri text-nrml cursor-pointer"
                 >
-                    About us
+                  About us
                 </Link>
               </div>
               <div className="flex gap-1 items-center">
@@ -147,7 +185,7 @@ const Footer: React.FC = () => {
                   to="destination"
                   className="text-paragraph-color hover:text-secondary-100 font-medium font-messiri text-nrml cursor-pointer"
                 >
-                    Destination
+                  Destination
                 </Link>
               </div>
               <div className="flex gap-1 items-center">
@@ -159,7 +197,7 @@ const Footer: React.FC = () => {
                   to="blog"
                   className="text-paragraph-color hover:text-secondary-100 font-medium font-messiri text-nrml cursor-pointer"
                 >
-                    Blog & News
+                  Blog & News
                 </Link>
               </div>
               <div className="flex gap-1 items-center">
@@ -171,7 +209,7 @@ const Footer: React.FC = () => {
                   to="contact"
                   className="text-paragraph-color hover:text-secondary-100 font-medium font-messiri text-nrml cursor-pointer"
                 >
-                    Pricing Package
+                  Pricing Package
                 </Link>
               </div>
             </div>
@@ -192,7 +230,7 @@ const Footer: React.FC = () => {
                   to="#"
                   className="text-paragraph-color hover:text-secondary-100 font-medium font-messiri text-nrml cursor-pointer"
                 >
-                    Company History
+                  Company History
                 </Link>
               </div>
               <div className="flex gap-1 items-center">
@@ -216,7 +254,7 @@ const Footer: React.FC = () => {
                   to="#"
                   className="text-paragraph-color hover:text-secondary-100 font-medium font-messiri text-nrml cursor-pointer"
                 >
-                    Case Studies
+                  Case Studies
                 </Link>
               </div>
               <div className="flex gap-1 items-center">
@@ -228,7 +266,7 @@ const Footer: React.FC = () => {
                   to="#"
                   className="text-paragraph-color hover:text-secondary-100 font-medium font-messiri text-nrml cursor-pointer"
                 >
-                    Expert Team
+                  Expert Team
                 </Link>
               </div>
               <div className="flex gap-1 items-center">
@@ -240,27 +278,32 @@ const Footer: React.FC = () => {
                   to="#"
                   className="text-paragraph-color hover:text-secondary-100 font-medium font-messiri text-nrml cursor-pointer"
                 >
-                    Pricing Package
+                  Pricing Package
                 </Link>
               </div>
             </div>
           </div>
         </div>
         <div className="border-t-2 pt-4 border-primary-25 flex md:flex-row flex-col md:items-start items-center md:gap-0 gap-10 justify-between w-full">
+          <div>
+            <p>
+              Copyright @2023,{" "}
+              <span className="text-primary-100 font-bold">Trave</span>
+              <span className="font-bold text-secondary-100">ler</span> All
+              Rights Reserved
+            </p>
+          </div>
+          <div className="flex md:flex-row flex-col gap-6">
             <div>
-                <p>Copyright @2023, <span className="text-primary-100 font-bold">Trave</span><span className="font-bold text-secondary-100">ler</span> All Rights Reserved</p>
+              <p>Terms Of Use</p>
             </div>
-            <div className="flex md:flex-row flex-col gap-6">
-                <div>
-                    <p>Terms Of Use</p>
-                </div>
-                <div>
-                    <p>Privacy Policy</p>
-                </div>
-                <div>
-                    <p>FAQs</p>
-                </div>
+            <div>
+              <p>Privacy Policy</p>
             </div>
+            <div>
+              <p>FAQs</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
