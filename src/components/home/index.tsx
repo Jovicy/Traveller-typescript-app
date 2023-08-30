@@ -20,7 +20,7 @@ const Home: React.FC = () => {
       className={`${flexBetween} bg-transparent w-full pt-36 pb-14`}
     >
       <div
-        className={`md:${flexBetween} md:flex-row flex-col md:text-left text-center mx-auto w-full md:gap-4  gap-10 container`}
+        className={`md:${flexBetween} md:flex-row flex-col md:text-left text-center mx-auto w-full md:gap-4 gap-10 container`}
       >
         <motion.div
           initial="hidden"
@@ -31,7 +31,7 @@ const Home: React.FC = () => {
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
           }}
-          className="flex flex-col gap-3 md:w-9/12 w-full"
+          className="flex flex-col md:items-start items-center gap-3 md:w-9/12 w-full"
         >
           <div className="flex flex-col gap-3">
             <div>
@@ -52,7 +52,7 @@ const Home: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="bg-white shadow-lg shadow-primary-25 p-5 rounded-md flex items-center gap-5 w-full h-auto">
+          <div className="bg-white shadow-lg shadow-primary-25 p-5 rounded-md flex items-center gap-5 md:w-full w-[85%] h-auto">
             <div className="bg-primary-10 p-2 rounded-md gap-3 flex justify-start h-1/4 items-center w-1/4 cursor-pointer">
               <MapPinIcon className="h-6 w-6 text-primary-100" />
               <div className="md:flex hidden flex-col gap-1 ">
@@ -98,7 +98,7 @@ const Home: React.FC = () => {
                 visible: { opacity: 1, y: 0 },
               }}
               src={dubai}
-              className="cursor-pointer md:absolute z-10 transition-all outline-offset-2 top-[-20rem] left-[-10rem] md:rounded-bl-lg rounded-md md:w-[345px] md:h-[371px] hover:z-20 hover:scale-105 hover:-translate-y-5"
+              className="cursor-pointer md:absolute z-10 transition-all outline-offset-2 top-[-20rem] left-[-10rem] md:rounded-bl-lg rounded-md md:w-[345px] w-[80%] md:h-[371px] hover:z-20 hover:scale-105 hover:-translate-y-5"
               alt="dubai-skyscraper"
             />
             <motion.img
@@ -111,7 +111,7 @@ const Home: React.FC = () => {
                 visible: { opacity: 1, y: 0 },
               }}
               src={tourist}
-              className="cursor-pointer md:absolute z-10 transition-all outline-offset-2 top-[-4rem] left-[1rem] md:rounded-tr-lg rounded-md md:w-[345px] md:h-[371px]"
+              className="cursor-pointer md:absolute z-10 transition-all outline-offset-2 top-[-4rem] left-[1rem] md:rounded-tr-lg rounded-md md:w-[345px] w-[80%] md:h-[371px]"
               alt="tourist-on-a-mountain"
             />
             <motion.img

@@ -19,7 +19,7 @@ const About: React.FC = () => {
         }
       >
         <div className="md:w-1/2 w-full">
-          <div className="md:relative md:left-40 w-full">
+          <div className="md:relative md:left-40 flex flex-col items-center justify-center">
             <motion.img
               initial="hidden"
               whileInView="visible"
@@ -30,7 +30,7 @@ const About: React.FC = () => {
                 visible: { opacity: 1, y: 0 },
               }}
               src={p3}
-              className="cursor-pointer md:absolute mt-30 z-10 transition-all outline-offset-2 top-[10rem] left-[-12rem] md:rounded-bl-lg rounded-md md:w-[305px] w-full md:h-[301px] hover:z-20 hover:scale-105 hover:-translate-y-5"
+              className="cursor-pointer md:absolute mt-30 z-10 transition-all outline-offset-2 top-[10rem] left-[-12rem] md:rounded-bl-lg rounded-md md:w-[305px] w-[80%] md:h-[301px] hover:z-20 hover:scale-105 hover:-translate-y-5"
               alt="p1"
             />
             <motion.img
@@ -43,7 +43,7 @@ const About: React.FC = () => {
                 visible: { opacity: 1, x: 0 },
               }}
               src={p2}
-              className="cursor-pointer md:absolute -mt-10 z-10 transition-all outline-offset-2 top-[0rem] left-[0rem] md:rounded-tr-lg rounded-md md:w-[305px] w-full md:h-[301px] hover:z-20 hover:scale-105 hover:-translate-y-5"
+              className="cursor-pointer md:absolute -mt-10 z-10 transition-all outline-offset-2 top-[0rem] left-[0rem] md:rounded-tr-lg rounded-md md:w-[305px] w-[80%] md:h-[301px] hover:z-20 hover:scale-105 hover:-translate-y-5"
               alt="p2"
             />
             <motion.img
@@ -57,7 +57,7 @@ const About: React.FC = () => {
               }}
               src={p1}
               alt="p3"
-              className="cursor-pointer md:absolute -mt-10 z-10 transition-all outline-offset-2 top-[-10rem] left-[-10rem] md:rounded-tl-lg rounded-md md:w-[245px] w-full md:h-[271px]"
+              className="cursor-pointer md:absolute -mt-10 z-10 transition-all outline-offset-2 top-[-10rem] left-[-10rem] md:rounded-tl-lg rounded-md md:w-[245px] w-[80%] md:h-[271px]"
             />
           </div>
         </div>
